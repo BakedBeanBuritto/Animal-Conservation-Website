@@ -1,0 +1,128 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+}
+
+body{
+    min-height: 100vh;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    list-style: none;
+}
+
+nav a{
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 3px 10px;
+    margin: 10px;
+    text-decoration: none;
+    transition: .5s;
+    border-radius: 30px;
+}
+
+nav a:hover{
+    background: rgb(255, 255, 255);
+    color: black;
+    transition: 0.2s;
+    font-size: 1.2em;
+}
+
+/* This is perhaps the worst way to do this. Separating them into classes like this. The main reason i did this was to make sure i can customize each section, and make them look unique. If there's a way to do it through JavaScript, at this moment, i am not aware of that method.  */
+
+.Section1{
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    background: url(/images/Space.png);
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    font-family:fantasy;
+    display: flex;
+    flex-wrap: wrap;
+    /* transform: translateY(-50%); */
+    color:rgb(255, 255, 0);
+    left:0;
+    font-size: 200px;
+}
+
+.Section2{
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    background: url(/images/Dino.png);
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+}
+
+.Section3{
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align:center;
+    position: relative;
+
+    background: url(/images/Space.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.Section4{
+    
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align:center;
+    position: relative;
+
+    background: url(/images/Space.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.Section5{
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align:center;
+    position: relative;
+
+    background: url(/images/Space.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* h1{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width:100%;
+    left:0;
+    font-size: calc(1rem+3vw);
+} */
+
