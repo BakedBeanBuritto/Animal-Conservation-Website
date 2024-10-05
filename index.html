@@ -12,7 +12,7 @@
     Brad Simbizi, 
     Animal Conservation">
     <title>Animal Conservation website</title>
-    <link rel="stylesheet" href="./styles/scrollSnap.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
 
     <script type="application/Id+json">
@@ -36,32 +36,42 @@
         </nav>
     </header>
 
-    <article>
-      <section class="Section1">
-        <h1 class="title">SAVE THE PLANET</h1>
-        <!-- <p>
-          This blue marble floating in the endless abyss has been around for an estimated 4.45 billion years, give or take 50 million years, as stated in a National Geographic article.
-          Now, the Earth is no stranger to a mass extinction event. In the Earth’s lengthy history. It has seen 5 full mass extinction events. The most famous being…
-        </p> -->
+    <main>
+      <section class="parallax">
+        <h1 id="text">SAVE THE PLANET</h1>
+        <h2 id="subText">Before it's too late...</h2>
+
+        <img src="./images/Space.png" alt="" id="space">
+        <img src="./images/Earth.png" alt="" id="earth">
+        <img src="./images/Meteor.png" alt="" id="meteor">
       </section>
-    
-      <section class="Section2">
-        <h1>Section two</h1>
+
+      <section class="parallax">
+        <img src="./images/Stars1.png" alt="" id="stars1">
+        <img src="./images/Stars2.png" alt="" id="stars2">
+        <img src="./images/DarkSpace.png" alt="" id="darkSpace">
       </section>
-    
-      <section class="Section3">
-        <h1>Section three</h1>
+
+      <section class="parallax">
+        <p id="paragraph">
+          This blue marble floating in the endless abyss has been around for an estimated 4.45 billion years, give or take 50 million years, as stated in a National Geographic article. Interestingly enough, he Earth is no stranger to a mass extinction event. In the Earth’s lengthy history. It has seen 5 full mass extinction events. The most famous being…
+        </p>
+
+        <img src="./images/Cloud1.png" alt="" id="Cloud1">
+        <img src="./images/Cloud2.png" alt="" id="Cloud2">
+        <img src="./images/Cloud3.png" alt="" id="Cloud3">
       </section>
-    
-      <section class="Section4">
-        <h1>Section four</h1>
+
+      <section class="parallax">
+        <img src="./images/Dino.png" alt="">
       </section>
-    
-      <section class="Section5">
-        <h1>Section five</h1>
-      </section>
-    </article>
+
+      <button class="button" onclick="scrollToTop()">Scroll To Top</button>
+    </main>
 </body>
+<script src="./scripts/parallax.js"></script>
+<script src="./scripts/ScrollTop.js"></script>
 <script type="module" >import{initialise} from "./scripts/nav.js"
         initialise("Home")</script>
+    
 </html>

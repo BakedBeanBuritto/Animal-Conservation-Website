@@ -1,24 +1,27 @@
 *{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+/* html{
     scroll-snap-type: y mandatory;
-}
+} */
 
 header{
     position: absolute;
     width: 100%;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 
 body{
+    background-color: black;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
+/* styling for my page's links */
 nav ul{
     display: flex;
     justify-content: center;
@@ -34,19 +37,105 @@ nav a{
     margin: 10px;
     text-decoration: none;
     transition: .5s;
-    border-radius: 30px;
 }
 
 nav a:hover{
     background: rgb(255, 255, 255);
-    color: black;
+    color: rgb(0, 0, 0);
     transition: 0.2s;
     font-size: 1.2em;
+    border-radius: 30px;
 }
+
+/* maybe this will turn out to be a horrific idea, but i dont know. the original idea was to have scroll snapping and a parallax, to make the website more interesting, but the scroll snap didnt work properly with the scrollwheel, so i opted for simple parallax layers */
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url('/images/Space.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+}
+h1{
+    top:20%;
+    transform: translateY(-50%);
+    text-align: center;
+    width:100%;
+    left:0;
+}
+
+#text{
+    position:absolute;
+    padding-top: 100px;
+    font-size: 10em;
+    color: crimson;
+    z-index: 1;
+}
+#subText{
+    top: 50%;
+    position:absolute;
+    font-size: 3em;
+    color: rgb(35, 64, 88);
+    z-index: 1;
+}
+#paragraph{
+    /* trying to align the text to the right in this section */
+    text-align: justify;
+    margin-right: 300px;
+    margin-left: 700px;
+    margin-bottom: 150px;
+    border-style: dashed;
+
+    
+    transform: translateX(10px);
+    transform: translateY(120px);
+    
+    color: white;
+    z-index: 1;    
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events:none;
+}
+.parallax img#earth{
+    z-index: 1;
+}
+.parallax img#meteor{
+    z-index: 1;
+    width: 1000px;
+    transform: translateX(-200px);
+    transform: translateY(-2000px);
+}
+
+.parallax img#stars1, img#stars2{
+    transform: translateY(-500px);
+    z-index: 1;
+}
+
+.parallax img#Cloud1, img#Cloud2, img#Cloud3{
+    transform: translateY(120px);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
 
 /* This is perhaps the worst way to do this. Separating them into classes like this. The main reason i did this was to make sure i can customize each section, and make them look unique. If there's a way to do it through JavaScript, at this moment, i am not aware of that method.  */
 
-.Section1{
+/* .Section1{
     padding: 1rem;
     height: 100vh;
     scroll-snap-align: start;
@@ -56,10 +145,10 @@ nav a:hover{
     background-position: center;
 }
 .title{
-    font-family:fantasy;
-    display: flex;
-    flex-wrap: wrap;
-    /* transform: translateY(-50%); */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 50px;
+    word-spacing: 100px;
+    width: 900px;
     color:rgb(255, 255, 0);
     left:0;
     font-size: 200px;
@@ -113,7 +202,7 @@ nav a:hover{
     background: url(/images/Space.png);
     background-size: cover;
     background-position: center;
-}
+} */
 
 /* h1{
     position: absolute;

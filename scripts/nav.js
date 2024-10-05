@@ -5,18 +5,19 @@ const MainmenuItems= [
     {name:"About", href:"about/index.html"}
 ]
 export function initialise(currentPage){
-    const nav=document.querySelector("header > nav")
-    const ul=document.createElement("ul")
-    const li=document.createElement("li")
+    const nav=document.querySelector("header > nav");
+    const ul=document.createElement("ul");
+    const li=document.createElement("li");
+
     for(let MainmenuItem of MainmenuItems){
-        const li=document.createElement("li")
+        const li=document.createElement("li");
         if(currentPage = MainmenuItem.name){
             const a = document.createElement("a")
-            a.innerText = MainmenuItem.name
-            a.setAttribute("href", MainmenuItem.href)
-            li.appendChild(a)
+            a.innerText = MainmenuItem.name;
+            a.setAttribute("href", MainmenuItem.href);
+            li.appendChild(a);
         } else {li.innerText=MainmenuItem.name}
-        ul.appendChild(li)
+        ul.appendChild(li);
     }
     nav.appendChild(ul)
 }
