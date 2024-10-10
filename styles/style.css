@@ -16,7 +16,7 @@ header{
 }
 
 body{
-    background-color: black;
+    background-color: white;
     overflow-x: hidden;
     min-height: 100vh;
 }
@@ -67,7 +67,6 @@ h1{
     width:100%;
     left:0;
 }
-
 #text{
     position:absolute;
     padding-top: 100px;
@@ -76,26 +75,29 @@ h1{
     z-index: 1;
 }
 #subText{
-    top: 50%;
+    top: 40%;
     position:absolute;
     font-size: 3em;
     color: rgb(35, 64, 88);
     z-index: 1;
 }
-#paragraph{
-    /* trying to align the text to the right in this section */
+#trackpad{
+    top: 75%;
+    position:absolute;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+#para1, #para2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 100%;
     text-align: justify;
-    margin-right: 300px;
-    margin-left: 700px;
-    margin-bottom: 150px;
-    border-style: dashed;
-
-    
-    transform: translateX(10px);
-    transform: translateY(120px);
-    
-    color: white;
-    z-index: 1;    
+    padding: 300px;
+    position:absolute;
+    color: rgb(255, 255, 255);
+    z-index: 0;
 }
 
 .parallax img{
@@ -108,15 +110,18 @@ h1{
 .parallax img#earth{
     z-index: 1;
 }
-.parallax img#meteor{
-    z-index: 1;
-    width: 1000px;
-    transform: translateX(-200px);
-    transform: translateY(-2000px);
-}
 
 .parallax img#stars1, img#stars2{
-    transform: translateY(-500px);
+    transform: translateY(-450px);
+    z-index: 1;
+}
+
+.parallax img#hill{
+    transform: translateY(500px);
+    z-index: 1;
+}
+.parallax img#fire{
+    transform: translateY(1060px);
     z-index: 1;
 }
 
@@ -125,13 +130,32 @@ h1{
     z-index: 1;
 }
 
+.parallax img#Leaves1, img#Leaves1{
+    transform: translateY(120px);
+    z-index: 1;
+}
 
-
-
-
-
-
-
+.about{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 0%;
+    text-align: justify;
+    padding: 300px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+.why{
+    top: 20%;
+    position:absolute;
+    font-size: 3em;
+    color: steelblue;
+    z-index: 1;
+}
+.button{
+    z-index: 100;
+}
 
 /* This is perhaps the worst way to do this. Separating them into classes like this. The main reason i did this was to make sure i can customize each section, and make them look unique. If there's a way to do it through JavaScript, at this moment, i am not aware of that method.  */
 
